@@ -3,11 +3,11 @@ package redis
 import (
 	"context"
 
-	contractsfoundation "github.com/goravel/framework/contracts/foundation"
-	contractsqueue "github.com/goravel/framework/contracts/queue"
-	"github.com/goravel/framework/queue/utils"
-	"github.com/goravel/framework/support/carbon"
 	"github.com/redis/go-redis/v9"
+	contractsfoundation "github.com/rusmanplatd/goravelframework/contracts/foundation"
+	contractsqueue "github.com/rusmanplatd/goravelframework/contracts/queue"
+	"github.com/rusmanplatd/goravelframework/queue/utils"
+	"github.com/rusmanplatd/goravelframework/support/carbon"
 )
 
 type ReservedJob struct {

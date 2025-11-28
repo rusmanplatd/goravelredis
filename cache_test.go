@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	mocksconfig "github.com/goravel/framework/mocks/config"
-	"github.com/goravel/framework/support/env"
 	"github.com/redis/go-redis/v9"
+	mocksconfig "github.com/rusmanplatd/goravelframework/mocks/config"
+	"github.com/rusmanplatd/goravelframework/support/env"
 	"github.com/spf13/cast"
 	"github.com/stretchr/testify/suite"
 )

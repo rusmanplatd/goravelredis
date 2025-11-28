@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"time"
 
-	contractsconfig "github.com/goravel/framework/contracts/config"
-	contractsdocker "github.com/goravel/framework/contracts/testing/docker"
-	supportdocker "github.com/goravel/framework/support/docker"
-	testingdocker "github.com/goravel/framework/testing/docker"
 	"github.com/redis/go-redis/v9"
+	contractsconfig "github.com/rusmanplatd/goravelframework/contracts/config"
+	contractsdocker "github.com/rusmanplatd/goravelframework/contracts/testing/docker"
+	supportdocker "github.com/rusmanplatd/goravelframework/support/docker"
+	testingdocker "github.com/rusmanplatd/goravelframework/testing/docker"
 	"github.com/spf13/cast"
 )
 

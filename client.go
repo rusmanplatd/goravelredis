@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/goravel/framework/contracts/config"
-	"github.com/goravel/framework/support/color"
 	"github.com/redis/go-redis/v9"
+	"github.com/rusmanplatd/goravelframework/contracts/config"
+	"github.com/rusmanplatd/goravelframework/support/color"
 )
 
 // Global map to store Redis client connections.

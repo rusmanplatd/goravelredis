@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"testing"
 
-	contractsdocker "github.com/goravel/framework/contracts/testing/docker"
-	mocksconfig "github.com/goravel/framework/mocks/config"
-	testingdocker "github.com/goravel/framework/testing/docker"
 	"github.com/redis/go-redis/v9"
+	contractsdocker "github.com/rusmanplatd/goravelframework/contracts/testing/docker"
+	mocksconfig "github.com/rusmanplatd/goravelframework/mocks/config"
+	testingdocker "github.com/rusmanplatd/goravelframework/testing/docker"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )

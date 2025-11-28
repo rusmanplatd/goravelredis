@@ -6,12 +6,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/goravel/framework/cache"
-	contractscache "github.com/goravel/framework/contracts/cache"
-	"github.com/goravel/framework/contracts/config"
-	contractshttp "github.com/goravel/framework/contracts/http"
-	contractsdocker "github.com/goravel/framework/contracts/testing/docker"
 	"github.com/redis/go-redis/v9"
+	"github.com/rusmanplatd/goravelframework/cache"
+	contractscache "github.com/rusmanplatd/goravelframework/contracts/cache"
+	"github.com/rusmanplatd/goravelframework/contracts/config"
+	contractshttp "github.com/rusmanplatd/goravelframework/contracts/http"
+	contractsdocker "github.com/rusmanplatd/goravelframework/contracts/testing/docker"
 	"github.com/spf13/cast"
 )
 

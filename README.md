@@ -17,7 +17,7 @@ A redis driver for `facades.Cache()`, `facades.Queue()` and `facades.Session()` 
 Run the command below in your project to install the package automatically:
 
 ```
-./artisan package:install github.com/goravel/redis
+./artisan package:install github.com/rusmanplatd/goravelredis
 ```
 
 Or check [the setup file](./setup/setup.go) to install the package manually.

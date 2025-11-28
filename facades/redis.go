@@ -1,11 +1,11 @@
 package facades
 
 import (
-	"github.com/goravel/framework/contracts/cache"
-	"github.com/goravel/framework/contracts/queue"
-	"github.com/goravel/framework/contracts/session"
+	"github.com/rusmanplatd/goravelframework/contracts/cache"
+	"github.com/rusmanplatd/goravelframework/contracts/queue"
+	"github.com/rusmanplatd/goravelframework/contracts/session"
 
-	"github.com/goravel/redis"
+	redis "github.com/rusmanplatd/goravelredis"
 )
 
 func Cache(store string) (cache.Driver, error) {

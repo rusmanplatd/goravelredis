@@ -3,12 +3,12 @@ package main
 import (
 	"os"
 
-	"github.com/goravel/framework/packages"
-	"github.com/goravel/framework/packages/match"
-	"github.com/goravel/framework/packages/modify"
-	"github.com/goravel/framework/support/file"
-	"github.com/goravel/framework/support/path"
-	supportstubs "github.com/goravel/framework/support/stubs"
+	"github.com/rusmanplatd/goravelframework/packages"
+	"github.com/rusmanplatd/goravelframework/packages/match"
+	"github.com/rusmanplatd/goravelframework/packages/modify"
+	"github.com/rusmanplatd/goravelframework/support/file"
+	"github.com/rusmanplatd/goravelframework/support/path"
+	supportstubs "github.com/rusmanplatd/goravelframework/support/stubs"
 )
 
 var (
@@ -78,7 +78,7 @@ REDIS_PORT=6379
 			// Add redis cache configuration to cache.go if cache config file exists
 			modify.WhenFileExists(cacheConfigPath,
 				modify.GoFile(cacheConfigPath).
-					Find(match.Imports()).Modify(modify.AddImport("github.com/goravel/framework/contracts/cache"), modify.AddImport("github.com/goravel/redis/facades", "redisfacades")).
+					Find(match.Imports()).Modify(modify.AddImport("github.com/rusmanplatd/goravelframework/contracts/cache"), modify.AddImport("github.com/rusmanplatd/goravelredis/facades", "redisfacades")).
 					Find(match.Config("cache.stores")).Modify(modify.AddConfig("redis", cacheConfig)).
 					Find(match.Config("cache")).Modify(modify.AddConfig("default", `"redis"`)),
 			),
@@ -86,7 +86,7 @@ REDIS_PORT=6379
 			// Add redis queue configuration to queue.go if queue config file exists
 			modify.WhenFileExists(queueConfigPath,
 				modify.GoFile(queueConfigPath).
-					Find(match.Imports()).Modify(modify.AddImport("github.com/goravel/framework/contracts/queue"), modify.AddImport("github.com/goravel/redis/facades", "redisfacades")).
+					Find(match.Imports()).Modify(modify.AddImport("github.com/rusmanplatd/goravelframework/contracts/queue"), modify.AddImport("github.com/rusmanplatd/goravelredis/facades", "redisfacades")).
 					Find(match.Config("queue.connections")).Modify(modify.AddConfig("redis", queueConfig)).
 					Find(match.Config("queue")).Modify(modify.AddConfig("default", `"redis"`)),
 			),
@@ -94,7 +94,7 @@ REDIS_PORT=6379
 			// Add redis session configuration to session.go if session config file exists
 			modify.WhenFileExists(sessionConfigPath,
 				modify.GoFile(sessionConfigPath).
-					Find(match.Imports()).Modify(modify.AddImport("github.com/goravel/framework/contracts/session"), modify.AddImport("github.com/goravel/redis/facades", "redisfacades")).
+					Find(match.Imports()).Modify(modify.AddImport("github.com/rusmanplatd/goravelframework/contracts/session"), modify.AddImport("github.com/rusmanplatd/goravelredis/facades", "redisfacades")).
 					Find(match.Config("session.drivers")).Modify(modify.AddConfig("redis", sessionConfig)).
 					Find(match.Config("session")).Modify(modify.AddConfig("default", `"redis"`)),
 			),
@@ -113,7 +113,7 @@ REDIS_PORT=6379
 			modify.WhenFileExists(cacheConfigPath,
 				modify.GoFile(cacheConfigPath).
 					Find(match.Config("cache.stores")).Modify(modify.RemoveConfig("redis")).
-					Find(match.Imports()).Modify(modify.RemoveImport("github.com/goravel/framework/contracts/cache"), modify.RemoveImport("github.com/goravel/redis/facades", "redisfacades")).
+					Find(match.Imports()).Modify(modify.RemoveImport("github.com/rusmanplatd/goravelframework/contracts/cache"), modify.RemoveImport("github.com/rusmanplatd/goravelredis/facades", "redisfacades")).
 					Find(match.Config("cache")).Modify(modify.AddConfig("default", `"memory"`)),
 			),
 
@@ -121,7 +121,7 @@ REDIS_PORT=6379
 			modify.WhenFileExists(queueConfigPath,
 				modify.GoFile(queueConfigPath).
 					Find(match.Config("queue.connections")).Modify(modify.RemoveConfig("redis")).
-					Find(match.Imports()).Modify(modify.RemoveImport("github.com/goravel/framework/contracts/queue"), modify.RemoveImport("github.com/goravel/redis/facades", "redisfacades")).
+					Find(match.Imports()).Modify(modify.RemoveImport("github.com/rusmanplatd/goravelframework/contracts/queue"), modify.RemoveImport("github.com/rusmanplatd/goravelredis/facades", "redisfacades")).
 					Find(match.Config("queue")).Modify(modify.AddConfig("default", `"sync"`)),
 			),
 
@@ -129,7 +129,7 @@ REDIS_PORT=6379
 			modify.WhenFileExists(sessionConfigPath,
 				modify.GoFile(sessionConfigPath).
 					Find(match.Config("session.drivers")).Modify(modify.RemoveConfig("redis")).
-					Find(match.Imports()).Modify(modify.RemoveImport("github.com/goravel/framework/contracts/session"), modify.RemoveImport("github.com/goravel/redis/facades", "redisfacades")).
+					Find(match.Imports()).Modify(modify.RemoveImport("github.com/rusmanplatd/goravelframework/contracts/session"), modify.RemoveImport("github.com/rusmanplatd/goravelredis/facades", "redisfacades")).
 					Find(match.Config("session")).Modify(modify.AddConfig("default", `"file"`)),
 			),
 

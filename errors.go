@@ -1,6 +1,6 @@
 package redis
 
-import "github.com/goravel/framework/errors"
+import "github.com/rusmanplatd/goravelframework/errors"
 
 var (
 	ErrRedisServiceProviderNotRegistered = errors.New("please register redis service provider").SetModule("Redis")

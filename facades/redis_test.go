@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/goravel/framework/foundation/json"
-	mocksconfig "github.com/goravel/framework/mocks/config"
-	mocksfoundation "github.com/goravel/framework/mocks/foundation"
-	mocksqueue "github.com/goravel/framework/mocks/queue"
+	"github.com/rusmanplatd/goravelframework/foundation/json"
+	mocksconfig "github.com/rusmanplatd/goravelframework/mocks/config"
+	mocksfoundation "github.com/rusmanplatd/goravelframework/mocks/foundation"
+	mocksqueue "github.com/rusmanplatd/goravelframework/mocks/queue"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/goravel/redis"
+	redis "github.com/rusmanplatd/goravelredis"
 )
 
 func TestMakingSessionWithRealImplementation(t *testing.T) {

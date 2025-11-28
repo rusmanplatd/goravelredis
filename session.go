@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/goravel/framework/contracts/config"
-	"github.com/goravel/framework/contracts/session"
 	"github.com/redis/go-redis/v9"
+	"github.com/rusmanplatd/goravelframework/contracts/config"
+	"github.com/rusmanplatd/goravelframework/contracts/session"
 )
 
 // Ensure Redis driver satisfies the session.Driver interface at compile time.
